@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost &amp; Found</title>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Lost &amp; Found</h1>
+      <p class="subtitle">Report an item and we'll help reunite it with its owner.</p>
+
+      <form id="report-form">
+        <div class="toggle">
+          <input type="radio" id="lost" name="type" value="lost" checked />
+          <label for="lost">I lost something</label>
+          <input type="radio" id="found" name="type" value="found" />
+          <label for="found">I found something</label>
+        </div>
+
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@gmail.com" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="0712345678" pattern="[0-9]{10}" required />
+        </div>
+
+        <div class="field">
+          <label for="item">Item description</label>
+          <textarea id="item" name="item" rows="3" placeholder="Black backpack with a blue keychain..." required></textarea>
+        </div>
+
+        <button type="submit">Submit report</button>
+      </form>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
